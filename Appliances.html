@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <title>المنتجات</title>
+    </head>
+    <body  onload="createCaptcha()">
+        
+        <div class="nav">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a class="active" href="Appliances.html"> </a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+            </ul>
+        </div>
+    <h1>Appliances</h1>
+    <table>
+      <thead>
+        <tr>
+          <th class="m">المنتج</th>
+          <th>التفاصيل</th>
+          <th class="n">السعر</th>
+          <th>الصورة</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>براد</td>
+          <td><ul>
+              <li>سامسونج </li>
+               <li>تبريد شامل </li>
+               <li>توفير طاقة</li>
+            </ul>
+          </td>
+          <td>15,000,000 SYP</td>
+          <td><img src="pictures/براد.jpg">
+            <button onclick="Add_To_My_Cart( 'براد', 15000000 ,1) ">add of cart </button>
+          </td>
+        </tr>
+        <tr>
+          <td>samsung s9</td>
+          <td><ul><li>المعالج ثماني النواة</li>
+          <li>الكاميرا:12ميجا بكسل </li>
+        <li>الشاشة5.8بوصة</li></ul></td>
+          <td>2,000,000 SYP</td>
+          <td><img src="pictures/سامسونج.jpg">
+            <button onclick="Add_To_My_Cart('samsung s9',2000000,1);">add of cart</button></td>
+          
+        </tr>
+        <tr>
+          <td>شاشة LG</td>
+          <td><ul><li>45بوصة</li>
+          <li>خاصية تصفح الانترنت</li>
+        <li>منفذusb</li></ul></td>
+          <td>4,000,000 SYP</td>
+          <td><img src="pictures/شاشة .jpg">
+            <button onclick="Add_To_My_Cart('شاشة LG',4000000,1);">add of cart</button>
+          </td>
+        </tr>
+        <tr>
+            <td>huawei</td>
+            <td><ul><li>المعالج رباعي النواة </li>
+            <li>الكاميرا 8ميغا بكسل </li>
+          <li>الشاشة5.0بوصة</li></ul></td>
+            <td>1,500,000 SYP</td>
+            <td><img src="pictures/هواوي.png">
+              <button onclick="Add_To_My_Cart('huawei',1500000,1);">add of cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>خلاط كهربائي</td>
+            <td><ul><li>السعة:2ليتر</li>
+            <li>800واط</li></ul></td>
+            <td>1,000,000 SYP</td>
+            <td><img src="pictures/خلاط.jpg">
+              <button onclick="Add_To_My_Cart('خلاط كهربائي',1000000,1);">add of cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>مايكرويف </td>
+            <td><ul><li>تحكم رقمي </li>
+            <li>1150واط</li></ul></td>
+            <td>4,000,000 SYP</td>
+            <td><img src="pictures/مايكرويف.png">
+              <button onclick="Add_To_My_Cart(' مايكرويف',4000000,1);">add of cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>عجانة</td>
+            <td><ul><li>7ليتر</li>
+            <li>1300واط</li></ul></td>
+            <td>150,000 SYP</td>
+            <td><img src="pictures/عجانة.jpg">
+              <button onclick="Add_To_My_Cart(' عجانة',150000,1);">add of cart</button>
+          </tr>
+          <tr>
+            <td>غسالة</td>
+            <td><ul><li>السعة8كغ</li>
+            <li>تحكم رقمي </li></ul></td>
+            <td>1,000,000 SYP</td>
+            <td><img src="pictures/غسالة.jpg">
+              <button onclick="Add_To_My_Cart(' غسالة',1000000,1);">add of cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>مكنسة كهربائية</td>
+            <td><ul><li>800واط</li>
+            <li>للتنظيف العميق</li></ul></td>
+            <td>4,000,000 SYP</td>
+            <td><img src="pictures/مكنسة.jpg">
+              <button onclick="Add_To_My_Cart('مكنسة كهربائية',4000000,1);">add of cart</button>
+            </td>
+          </tr>
+          <tr>
+            <td>لابتوب</td>
+            <td><ul><li>الرام16 جيجا بايت </li>
+            <li>التخزين 1 تيرا بايت </li>
+          <li>المعالج cori10</li></ul></td>
+            <td>4,000,000 SYP</td>
+            <td><img src="pictures/لابتوب.jpg">
+              <button onclick="Add_To_My_Cart('لابتوب',4000000,1);">add of cart</button>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    <table  >
+      <tr>
+          <th >اسم</th>
+          <th>سعر</th>
+          <th>كمية</th>
+          <th>سعر اجمالي</th>
+      </tr>
+      <tbody id="Shopping_Cart"></tbody>
+  </table>
+  <table  ><tr>
+      <th>ضريبة%5</th>
+      <th>مجموع نهائي <span id="Rival"></span> </th>
+  </tr>
+</table>
+<br>
+<button onclick="location.href='main.html'" class="button">Close</button>
+
+<label for="myButton">متابعة</label>
+<input type = "checkbox" id="myButton" class="myBtn" name = "next" value = "check"> 
+<hr>
+
+
+<form id="myForm" style="display:none;"  onsubmit="return ChechFormValues(this)" >
+  <h2>Request Form</h2>
+  <label for="full-name">Full Name:</label>
+  <input type="text" placeholder="full_name " name="name" required />
+  <br>
+  <label for="national-id">National ID:</label>
+  <input type="text" name="id" required/>
+  <br>
+  <label for="date-of-birth">Date of Birth:</label>
+  <input type="date" name="birth" required/>
+  <br>
+  <label for="mobile-number">Mobile Number:</label>
+  <input type="text" name="phone" placeholder="09xxxxxxxx" required/>
+  <br>
+  <label for="email">Email:</label>
+  <input type="text" name="mail" placeholder="example@mail.com" required/>
+
+  <br>
+  
+
+
+  
+  <label for="captcha">
+  <svg width="120" height="50">
+    <filter id="BlurFilter">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1" />
+    </filter>
+    <rect width="120" height="50" fill="#afcfe2" />
+    <text id="captcha" filter="url(#BlurFilter)" fill="#174e6e" stroke="black" font-size="30" font-family="Ink Free" x="100" y="35" ></text>
+</svg>
+
+<input id="cpatchaTextBox" type="text" placeholder="ادخل رمز التحقق" size="14" autocomplete="off" required/>
+<input type="button" id="recaptchBtn" value="تغيير الرمز" onclick="createCaptcha()" />
+
+</label>
+
+
+  <br>
+  <button type="submit"  >شراء</button>
+</form>
+</div>
+
+
+    <script src="MyFunction.js"></script>
+  </body>
+</html>
